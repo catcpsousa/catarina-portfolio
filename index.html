@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Catarina Sousa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-glow glow-a"></div>
+  <div class="page-glow glow-b"></div>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <nav class="nav nav-left" aria-label="Navegação principal">
+        <a href="#hero" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Service</a>
+      </nav>
+
+      <a class="brand" href="#hero">CT</a>
+
+      <nav class="nav nav-right" aria-label="Navegação secundária">
+        <a href="#contact">Resume</a>
+        <a href="#projects">Project</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero hero-compact section">
+      <div class="container hero-stage reveal">
+        <div class="hero-copy">
+          <span class="hello-pill">Hello!</span>
+          <h1>I'm <span>Catarina</span>,<br>Web Developer</h1>
+          <p>Crio experiências web limpas, rápidas e visuais com foco em HTML, CSS e JavaScript. O objectivo é combinar estética forte com navegação simples e funcional.</p>
+          <div class="hero-switch" role="group" aria-label="Ações principais">
+            <span class="hero-switch-thumb" aria-hidden="true"></span>
+            <a class="hero-switch-item is-active" href="#projects">Portfolio ↗</a>
+            <a class="hero-switch-item" href="#contact">Hire me</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-ring"></div>
+          <div class="hero-figure-wrap">
+            <img id="profilePhoto" class="hero-figure" src="assets/profile.png" alt="Foto de Catarina" onerror="this.style.display='none'" />
+          </div>
+          <div class="hero-caption hero-caption-left">
+            <strong>Web design</strong>
+            <span>Layouts premium e responsivos</span>
+          </div>
+          <div class="hero-caption hero-caption-right">
+            <strong>10 Years</strong>
+            <span>Experience</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Montra</p>
+          <h2>Projetos em destaque</h2>
+          <p class="section-text">Uma vitrine visual dos projetos já implementados, organizada por tipo de trabalho e com previews mais ricos.</p>
+        </div>
+
+        <div class="filters reveal" id="filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="restaurant">Restaurantes</button>
+          <button class="filter-btn" data-filter="quiz">Quizzes</button>
+          <button class="filter-btn" data-filter="support">Suporte</button>
+          <button class="filter-btn" data-filter="landing">Landing Pages</button>
+          <button class="filter-btn" data-filter="admin">Admin</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card reveal" data-category="restaurant">
+            <div class="project-preview preview-restaurant"></div>
+            <div class="project-content">
+              <span class="chip">Restaurante</span>
+              <h3>Website premium para restaurante</h3>
+              <p>Hero visual forte, menu elegante, secções de reservas e navegação pensada para mobile.</p>
+              <div class="project-meta">HTML • CSS • JS • UI Motion</div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="quiz">
+            <div class="project-preview preview-quiz"></div>
+            <div class="project-content">
+              <span class="chip">Quizzes</span>
+              <h3>App de apoio à carta de condução</h3>
+              <p>Simulado, treino, revisão de erradas, perfil, favoritos e estatísticas de progresso.</p>
+              <div class="project-meta">JavaScript • LocalStorage • UX</div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="support">
+            <div class="project-preview preview-support"></div>
+            <div class="project-content">
+              <span class="chip">Suporte</span>
+              <h3>Portal interno de tickets</h3>
+              <p>Estrutura para pedidos, documentação, base de conhecimento e suporte técnico.</p>
+              <div class="project-meta">Organização • Front-end • Fluxos</div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="landing">
+            <div class="project-preview preview-landing"></div>
+            <div class="project-content">
+              <span class="chip">Landing Page</span>
+              <h3>Página de conversão para evento</h3>
+              <p>Landing focada em objectivo único, secções curtas, CTA clara e motion leve.</p>
+              <div class="project-meta">Design • Conversão • Responsive</div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="admin">
+            <div class="project-preview preview-admin"></div>
+            <div class="project-content">
+              <span class="chip">Admin</span>
+              <h3>Painel de gestão de conteúdo</h3>
+              <p>Área administrativa para criar perguntas, gerir temas e preparar conteúdos dinâmicos.</p>
+              <div class="project-meta">CRUD • Dados • Interface</div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="restaurant">
+            <div class="project-preview preview-restaurant-two"></div>
+            <div class="project-content">
+              <span class="chip">Restaurante</span>
+              <h3>Apresentação gastronómica</h3>
+              <p>Layout com secções para pratos, atmosfera e chamada à reserva com estética quente.</p>
+              <div class="project-meta">Visual Storytelling • HTML • CSS</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container split-grid">
+        <div class="section-head reveal">
+          <p class="eyebrow">Serviços</p>
+          <h2>O que entrego</h2>
+          <p class="section-text">Sites que parecem modernos, funcionam bem e comunicam o valor certo logo no primeiro impacto.</p>
+        </div>
+
+        <div class="skills-grid reveal">
+          <div class="skill-card">Websites institucionais</div>
+          <div class="skill-card">Landing pages</div>
+          <div class="skill-card">Painéis admin</div>
+          <div class="skill-card">Apps com JavaScript</div>
+          <div class="skill-card">Integração de dados</div>
+          <div class="skill-card">Efeitos e animações</div>
+          <div class="skill-card">Responsividade</div>
+          <div class="skill-card">Manutenção e suporte</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-soft">
+      <div class="container about-grid">
+        <div class="about-card reveal">
+          <p class="eyebrow">Sobre mim</p>
+          <h2>Desenvolvimento web com foco em detalhe, clareza e utilidade.</h2>
+          <p>Trabalho entre web development, suporte técnico e criação de interfaces para projectos práticos. Gosto de layouts limpos, transições bem medidas e experiências que ajudem o utilizador a navegar sem esforço.</p>
+        </div>
+        <div class="about-card reveal">
+          <p class="eyebrow">Valor acrescentado</p>
+          <ul class="highlight-list">
+            <li>Montra visual de projectos com filtros.</li>
+            <li>Fotografia pessoal integrada no hero.</li>
+            <li>Paleta warm pastel com aspecto premium.</li>
+            <li>Transições carregadas mas fluidas.</li>
+            <li>Estrutura ideal para mostrar trabalhos reais.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-card reveal">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>Vamos construir algo forte.</h2>
+          <p class="section-text">Esta área pode ligar para email, LinkedIn, GitHub ou formulário de contacto simples.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:teuemail@example.com">Enviar email</a>
+          <a class="btn secondary" href="#hero">Voltar ao topo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#projects">Projetos</a>
+    <a href="#services">Serviços</a>
+    <a href="#about">Sobre</a>
+    <a href="#contact">Contacto</a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
