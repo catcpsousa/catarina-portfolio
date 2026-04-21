@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Catarina Sousa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div class="page-glow glow-a"></div>
   <div class="page-glow glow-b"></div>
@@ -38,7 +42,8 @@
         <div class="hero-copy">
           <span class="hello-pill">Hello!</span>
           <h1>I'm <span>Catarina</span>,<br>Web Developer</h1>
-          <p>Crio experiências web limpas, rápidas e visuais com foco em HTML, CSS e JavaScript. O objectivo é combinar estética forte com navegação simples e funcional.</p>
+          <p>Crio experiências web limpas, rápidas e visuais com foco em HTML, CSS e JavaScript. O objectivo é combinar
+            estética forte com navegação simples e funcional.</p>
           <div class="hero-switch" role="group" aria-label="Ações principais">
             <span class="hero-switch-thumb" aria-hidden="true"></span>
             <a class="hero-switch-item is-active" href="#projects">Portfolio ↗</a>
@@ -49,7 +54,8 @@
         <div class="hero-visual">
           <div class="hero-ring"></div>
           <div class="hero-figure-wrap">
-            <img id="profilePhoto" class="hero-figure" src="assets/profile.png" alt="Foto de Catarina" onerror="this.style.display='none'" />
+            <img id="profilePhoto" class="hero-figure" src="assets/profile.png" alt="Foto de Catarina"
+              onerror="this.style.display='none'" />
           </div>
           <div class="hero-caption hero-caption-left">
             <strong>Web design</strong>
@@ -68,7 +74,8 @@
         <div class="section-head reveal">
           <p class="eyebrow">Montra</p>
           <h2>Projetos em destaque</h2>
-          <p class="section-text">Uma vitrine visual dos projetos já implementados, organizada por tipo de trabalho e com previews mais ricos.</p>
+          <p class="section-text">Uma vitrine visual dos projetos já implementados, organizada por tipo de trabalho e
+            com previews mais ricos.</p>
         </div>
 
         <div class="filters reveal" id="filters">
@@ -130,7 +137,8 @@
             <div class="project-content">
               <span class="chip">Admin</span>
               <h3>Portal de suporte técnico</h3>
-              <p>Painel para organizar pedidos de assistência, acompanhar estados e facilitar comunicação com clientes.</p>
+              <p>Painel para organizar pedidos de assistência, acompanhar estados e facilitar comunicação com clientes.
+              </p>
               <div class="project-meta">Fluxos • Organização • Interface</div>
               <a class="project-link" href="projects/repair-shop.html">Ver página do projeto</a>
             </div>
@@ -155,7 +163,8 @@
         <div class="section-head reveal">
           <p class="eyebrow">Serviços</p>
           <h2>O que entrego</h2>
-          <p class="section-text">Sites que parecem modernos, funcionam bem e comunicam o valor certo logo no primeiro impacto.</p>
+          <p class="section-text">Sites que parecem modernos, funcionam bem e comunicam o valor certo logo no primeiro
+            impacto.</p>
         </div>
 
         <div class="skills-grid reveal">
@@ -176,7 +185,8 @@
         <div class="about-card reveal">
           <p class="eyebrow">Sobre mim</p>
           <h2>Desenvolvimento web com foco em detalhe, clareza e utilidade.</h2>
-          <p>Trabalho entre web development, suporte técnico e criação de interfaces para projectos práticos. Gosto de layouts limpos, transições bem medidas e experiências que ajudem o utilizador a navegar sem esforço.</p>
+          <p>Trabalho entre web development, suporte técnico e criação de interfaces para projectos práticos. Gosto de
+            layouts limpos, transições bem medidas e experiências que ajudem o utilizador a navegar sem esforço.</p>
         </div>
         <div class="about-card reveal">
           <p class="eyebrow">Valor acrescentado</p>
@@ -193,22 +203,36 @@
 
     <section id="contact" class="section">
       <div class="container contact-card reveal">
-        <div>
+        <div class="contact-copy">
           <p class="eyebrow">Contacto</p>
           <h2>Vamos construir algo forte.</h2>
-          <p class="section-text">Podes contactar-me por email ou acompanhar o meu trabalho no LinkedIn e GitHub.</p>
-          <div class="contact-details">
-            <a href="mailto:catarinacpsousa@gmail.com">catarinacpsousa@gmail.com</a>
-            <a href="assets/Catarina-Sousa-CV.pdf" download>Descarregar CV</a>
+          <p class="section-text">
+            Podes falar comigo por email ou acompanhar o meu trabalho nas minhas redes.
+          </p>
+
+          <div class="contact-icon-grid">
+            <a class="contact-icon-link email" href="mailto:catarinacpsousa@gmail.com" aria-label="Enviar email">
+              <img src="assets/email.svg" alt="" aria-hidden="true" />
+              <span>Email</span>
+            </a>
+
+            <a class="contact-icon-link linkedin" href="https://www.linkedin.com/in/catarinacpsousa/" target="_blank"
+              rel="noopener noreferrer" aria-label="Abrir LinkedIn">
+              <img src="assets/linkedin.svg" alt="" aria-hidden="true" />
+              <span>LinkedIn</span>
+            </a>
+
+            <a class="contact-icon-link github" href="https://github.com/catcpsousa" target="_blank"
+              rel="noopener noreferrer" aria-label="Abrir GitHub">
+              <img src="assets/github.svg" alt="" aria-hidden="true" />
+              <span>GitHub</span>
+            </a>
+
+            <a class="contact-icon-link cv" href="assets/Catarina-Sousa-CV.pdf" download aria-label="Descarregar CV">
+              <img src="assets/cv.png" alt="" aria-hidden="true" />
+              <span>CV</span>
+            </a>
           </div>
-          <div class="contact-links">
-            <a href="https://www.linkedin.com/in/catarinacpsousa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/catcpsousa" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </div>
-        <div class="contact-actions">
-          <a class="btn primary" href="mailto:catarinacpsousa@gmail.com">Enviar email</a>
-          <a class="btn secondary" href="#hero">Voltar ao topo</a>
         </div>
       </div>
     </section>
@@ -222,5 +246,10 @@
   </div>
 
   <script src="js/main.js"></script>
+
+  <button id="backToTopBtn" class="back-to-top" aria-label="Voltar ao topo" hidden>
+    <img src="assets/icons/arrow-up.svg" alt="" aria-hidden="true">
+  </button>
 </body>
+
 </html>

@@ -31,3 +31,22 @@ window.addEventListener('scroll', () => {
     document.querySelector('.glow-a')?.style.setProperty('transform', `translateY(${y}px)`);
     document.querySelector('.glow-b')?.style.setProperty('transform', `translateY(${-y}px)`);
 });
+
+const backToTopBtn = document.getElementById('backToTopBtn');
+
+function toggleBackToTop() {
+  if (window.scrollY > window.innerHeight * 0.8) {
+    backToTopBtn.removeAttribute('hidden');
+    backToTopBtn.classList.add('is-visible');
+  } else {
+    backToTopBtn.classList.remove('is-visible');
+    backToTopBtn.setAttribute('hidden', '');
+  }
+}
+
+backToTopBtn?.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', toggleBackToTop);
+window.addEventListener('load', toggleBackToTop);

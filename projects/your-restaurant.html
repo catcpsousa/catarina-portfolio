@@ -19,17 +19,92 @@
 
   <main class="container">
     <section class="hero">
-      <p class="eyebrow">Case Study</p>
-      <h1>Website Premium para Restaurante</h1>
-      <p class="hero-text">Projeto focado em criar uma primeira impressao forte para um restaurante, com imagem de marca elegante, chamadas para reserva e navegacao simples em qualquer dispositivo.</p>
-      <div class="hero-media">
-        <img src="../assets/projects/your-restaurant.png" alt="Preview do website de restaurante" />
+      <div class="container">
+        <p class="eyebrow">Projecto • Restaurant Website Template</p>
+        <h1>Website responsivo e reutilizável para restaurantes</h1>
+        <p class="hero-text">Template desenvolvido para funcionar como base flexível para diferentes conceitos gastronómicos, com homepage editorial, menu dedicado, suporte multilíngue, layout partilhado e uma experiência rápida em desktop e mobile.</p>
+        <div class="hero-media">
+          <img src="assets/projects/your-restaurant.png" alt="Preview do website para restaurante" />
+        </div>
       </div>
     </section>
 
-    <section class="grid">
-      <article class="card"><h2>Objetivo</h2><p>Converter visitantes em clientes com uma experiencia visual apelativa e uma estrutura orientada para acao.</p></article>
-      <article class="card"><h2>Destaques</h2><p>Menu organizado, secoes de ambiente e CTA de reserva em pontos estrategicos da pagina.</p></article>
+    <section class="container grid">
+      <article class="card">
+        <h2>Visão geral</h2>
+        <p>Este projeto foi pensado como uma solução reutilizável para websites de restaurantes. O objetivo foi criar uma base visual elegante, fácil de adaptar e preparada para apresentar menu, contacto e reserva de forma clara.</p>
+      </article>
+
+      <article class="card">
+        <h2>Funcionalidades principais</h2>
+        <ul>
+          <li>Homepage com hero editorial, introdução, pratos em destaque, galeria e contacto.</li>
+          <li>Página de menu dedicada com filtros por categoria.</li>
+          <li>Header e footer partilhados para manter consistência entre páginas.</li>
+          <li>Suporte multilíngue em PT-PT, ES e EN-GB.</li>
+          <li>Lightbox na galeria com suporte para teclado.</li>
+          <li>Navegação mobile com menu colapsável.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Processo de implementação</h2>
+        <p>A estrutura foi desenhada para separar a lógica por responsabilidade. O layout partilhado fica em `js/shared-layout.js`, a tradução em `js/i18n.js`, as interações da homepage em `js/main.js` e a navegação da página de menu em `menu/js/main.js`.</p>
+      </article>
+
+      <article class="card">
+        <h2>Escolha das cores</h2>
+        <p>A paleta quente e neutra foi escolhida para transmitir conforto, proximidade e sofisticação. Os tons de laranja funcionam como acento e destacam ações importantes, enquanto os fundos claros melhoram a leitura e mantêm o ambiente visual leve.</p>
+      </article>
+
+      <article class="card">
+        <h2>Documentação e estrutura</h2>
+        <p>A documentação no README organiza o projeto em páginas, scripts e assets, facilitando manutenção e reutilização. Isso ajuda também a perceber rapidamente como o template está montado e onde alterar cada parte.</p>
+      </article>
+
+      <article class="card">
+        <h2>Tecnologias usadas</h2>
+        <div class="badge-row">
+          <span class="badge">HTML5</span>
+          <span class="badge">CSS3</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">LocalStorage</span>
+          <span class="badge">Responsive Design</span>
+          <span class="badge">Google Fonts</span>
+        </div>
+      </article>
+
+      <article class="card full">
+        <h2>Arquitetura do projeto</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>1. Estrutura base</strong>
+            <p>Criação da homepage, da página de menu e dos ficheiros comuns de estilos e scripts.</p>
+          </div>
+          <div class="timeline-item">
+            <strong>2. Sistema multilíngue</strong>
+            <p>Implementação das traduções e da persistência do idioma selecionado no navegador.</p>
+          </div>
+          <div class="timeline-item">
+            <strong>3. Interações e acessibilidade</strong>
+            <p>Menu mobile, galeria com lightbox e navegação pensada para uso confortável em qualquer ecrã.</p>
+          </div>
+          <div class="timeline-item">
+            <strong>4. Ajustes visuais</strong>
+            <p>Refinamento da identidade visual com sombras suaves, cantos arredondados e hierarquia tipográfica clara.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card full">
+        <h2>Desafios e soluções</h2>
+        <p>O principal desafio foi manter consistência entre páginas sem duplicar código desnecessariamente. A solução passou por extrair componentes comuns e centralizar a lógica mais sensível, o que tornou o projeto mais limpo, escalável e fácil de manter.</p>
+      </article>
+
+      <article class="card full">
+        <h2>Aprendizagens e próximos passos</h2>
+        <p>Este projeto reforçou a importância de organização estrutural, reutilização de componentes e comunicação visual clara. Como evolução futura, pode receber reservas integradas, mais páginas de conteúdo e novas variações de menu ou idiomas.</p>
+      </article>
     </section>
   </main>
 </body>
