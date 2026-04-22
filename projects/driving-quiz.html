@@ -19,17 +19,96 @@
 
   <main class="container">
     <section class="hero">
-      <p class="eyebrow">Case Study</p>
-      <h1>App de Apoio a Carta de Conducao</h1>
-      <p class="hero-text">Aplicacao pensada para treino diario com quizzes, revisao personalizada e acompanhamento de progresso, ajudando o utilizador a estudar com mais confianca.</p>
-      <div class="hero-media">
-        <img src="../assets/projects/biblio-nova.png" alt="Preview ilustrativo da app de quizzes" />
+      <div class="container">
+        <p class="eyebrow">Projecto • Sobre Rodas</p>
+        <h1>Plataforma front-end para preparação de exame de código</h1>
+        <p class="hero-text">Aplicação local-first em HTML, CSS e JavaScript que junta quizzes, gamificação, perfil, gestão de questões e revisão guiada numa experiência única para estudar e acompanhar progresso.</p>
+        <div class="hero-media">
+          <img src="../assets/projects/sobre-rodas.png" alt="Preview da aplicação Sobre Rodas" />
+        </div>
       </div>
     </section>
 
-    <section class="grid">
-      <article class="card"><h2>Objetivo</h2><p>Tornar o estudo mais pratico e motivador atraves de simulacoes curtas e repeticao inteligente.</p></article>
-      <article class="card"><h2>Destaques</h2><p>Treino por temas, historico de erros e visao rapida do desempenho ao longo do tempo.</p></article>
+    <section class="container grid">
+      <article class="card">
+        <h2>Visão geral</h2>
+        <p>O Sobre Rodas foi criado como uma ferramenta prática para preparação da teoria de condução em Portugal. O foco esteve em combinar estudo, simulação, revisão e motivação num só espaço, sem dependência de backend para a experiência principal.</p>
+      </article>
+
+      <article class="card">
+        <h2>Funcionalidades principais</h2>
+        <ul>
+          <li>Fluxo de quizzes por categoria A, B, C e D com disponibilidade automática.</li>
+          <li>Modos de quiz múltiplos: simulado de exame, simulação real com tempo, modo livre, estudo com feedback imediato, fraquezas críticas, adaptativo, revisão ultra-rápida e favoritos.</li>
+          <li>Navegação manual entre perguntas durante a sessão, com anterior e seguinte.</li>
+          <li>Classificação de tipos de erro: distração, lacuna de conhecimento e confusão de sinais.</li>
+          <li>Página de perfil com identidade editável, foto, cover, progressão de badge e cartões analíticos.</li>
+          <li>Sistema de gamificação com Rodinhas, desbloqueios, níveis e gastos na loja.</li>
+          <li>Página Loja para gastar Rodinhas em boosts e unlocks úteis.</li>
+          <li>Página Revisão para workflows de revisão pós-sessão e caderno de notas.</li>
+          <li>Header partilhado responsivo com navegação mobile/tablet, ações rápidas e atalho de perfil.</li>
+          <li>Página Admin para gestão de questões, temas, explicações, imagens e estado ativo.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Processo de implementação</h2>
+        <p>A app foi desenhada com um modelo local-first, centrado em `localStorage`, para manter dados de utilizador, histórico, estatísticas, favoritos, revisão e gamificação. A separação de responsabilidades por ficheiros tornou o sistema mais fácil de manter e expandir.</p>
+      </article>
+
+      <article class="card">
+        <h2>Escolha das cores</h2>
+        <p>A identidade visual foi construída para transmitir foco, energia e clareza durante o estudo. A paleta e os contrastes ajudam a distinguir modos, estados, progresso e destaques sem comprometer a legibilidade em sessões longas.</p>
+      </article>
+
+      <article class="card">
+        <h2>Documentação e estrutura</h2>
+        <p>O README e a arquitetura de pastas mostram claramente onde cada parte do sistema vive: UI, lógica de perfil, loja, revisão, dados e layout partilhado. Isso facilita manutenção, depuração e futuras melhorias sem mexer em toda a base ao mesmo tempo.</p>
+      </article>
+
+      <article class="card">
+        <h2>Tecnologias usadas</h2>
+        <div class="badge-row">
+          <span class="badge">HTML5</span>
+          <span class="badge">CSS3</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">Bootstrap 5.3.3</span>
+          <span class="badge">jsPDF</span>
+          <span class="badge">localStorage</span>
+        </div>
+      </article>
+
+      <article class="card full">
+        <h2>Arquitetura do projeto</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>1. Base de dados local</strong>
+            <p>Normalização de dados e keys como question bank, profile, history, stats, favorites, reminders e gamification.</p>
+          </div>
+          <div class="timeline-item">
+            <strong>2. Layout partilhado</strong>
+            <p>Header responsivo com branding consistente, atalhos rápidos e navegação adaptada a mobile, tablet e desktop.</p>
+          </div>
+          <div class="timeline-item">
+            <strong>3. Camadas funcionais</strong>
+            <p>Separação por ficheiros: `main.js`, `profile.js`, `admin.js`, `store.js`, `review-notebook.js`, `data-store.js` e `shared-layout.js`.</p>
+          </div>
+          <div class="timeline-item">
+            <strong>4. Evolução contínua</strong>
+            <p>Estrutura preparada para novos modos, métricas, revisões, melhorias de UI e expansão de conteúdos sem reescrever a aplicação.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card full">
+        <h2>Desafios e soluções</h2>
+        <p>O maior desafio foi lidar com muitas funções ao mesmo tempo, sem perder consistência entre páginas e sem duplicar lógica. A solução passou por criar um sistema de dados estável, componentes partilhados e uma separação clara entre estudo, perfil, revisão e administração.</p>
+      </article>
+
+      <article class="card full">
+        <h2>Aprendizagens e próximos passos</h2>
+        <p>Este projeto reforçou a importância de pensar em experiência, progresso e motivação como parte do produto, não só como extras visuais. Como evolução futura, pode ganhar sincronização externa, mais estatísticas, novos tipos de revisão e integração com backend.</p>
+      </article>
     </section>
   </main>
 </body>

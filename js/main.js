@@ -3,8 +3,27 @@ const mobileMenu = document.getElementById('mobileMenu');
 const filters = document.getElementById('filters');
 const cards = [...document.querySelectorAll('.project-card')];
 
-menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+function openMenu() {
+  mobileMenu.classList.add('open');
+  mobileMenuBackdrop.style.opacity = '1';
+  mobileMenuBackdrop.style.pointerEvents = 'auto';
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  mobileMenuBackdrop.style.opacity = '0';
+  mobileMenuBackdrop.style.pointerEvents = 'none';
+}
+
+// Abrir menu
+menuBtn.addEventListener('click', openMenu);
+// Fechar menu
+closeMenuBtn.addEventListener('click', closeMenu);
+mobileMenuBackdrop.addEventListener('click', closeMenu);
+// Fechar ao clicar num link
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
 
 filters?.addEventListener('click', e => {
     const btn = e.target.closest('.filter-btn');
@@ -50,3 +69,4 @@ backToTopBtn?.addEventListener('click', () => {
 
 window.addEventListener('scroll', toggleBackToTop);
 window.addEventListener('load', toggleBackToTop);
+
