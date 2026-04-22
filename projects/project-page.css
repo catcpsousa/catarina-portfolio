@@ -12,6 +12,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-family: Poppins, Inter, sans-serif;
@@ -20,8 +25,9 @@ body {
 }
 
 .container {
-    width: min(1100px, calc(100% - 32px));
+    width: min(1100px, 100%);
     margin: 0 auto;
+    padding-inline: 16px;
 }
 
 .project-topbar {

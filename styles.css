@@ -783,6 +783,11 @@ body {
     object-fit: contain;
 }
 
+.mobile-menu,
+.mobile-menu-backdrop {
+    display: none;
+}
+
 @media (max-width: 980px) {
     .contact-card {
         grid-template-columns: 1fr;
@@ -1078,6 +1083,11 @@ body {
 
     #contact .contact-icon-link {
         padding: 14px 10px;
+    }
+
+    .mobile-menu,
+    .mobile-menu-backdrop {
+        display: block;
     }
 
     .mobile-menu {
