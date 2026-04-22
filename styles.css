@@ -1083,80 +1083,118 @@ body {
     .mobile-menu {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
+        gap: 14px;
         position: fixed;
-        top: 0;
-        left: -82vw;
-        width: 82vw;
-        max-width: 340px;
-        height: 100vh;
-        background: #151515;
-        box-shadow: 8px 0 32px rgba(0, 0, 0, 0.18);
+        left: 50%;
+        top: 18px;
+        transform: translate(-50%, -24px) scale(.98);
+        width: min(92vw, 380px);
+        padding: 18px;
+        border-radius: 28px;
+        background: rgba(255, 252, 248, 0.92);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(47, 37, 32, .10);
+        box-shadow: 0 24px 60px rgba(44, 30, 22, .16);
         z-index: 2001;
-        padding: 48px 28px 28px 22px;
-        transition: left 0.35s cubic-bezier(.7, 0, .3, 1);
-        opacity: 1;
+        opacity: 0;
         pointer-events: none;
+        transition: opacity .28s ease, transform .28s ease;
     }
 
     .mobile-menu.open {
-        left: 0;
+        opacity: 1;
         pointer-events: auto;
+        transform: translate(-50%, 0) scale(1);
     }
 
-    .mobile-menu a {
-        color: #fff;
-        font-size: 1.18rem;
-        font-weight: 600;
-        text-decoration: none;
-        padding: 10px 0;
-        width: 100%;
-        border-radius: 8px;
-        transition: background .2s;
+    .mobile-menu-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 8px;
+        margin-bottom: 2px;
+        border-bottom: 1px solid rgba(47, 37, 32, .08);
     }
 
-    .mobile-menu a:hover,
-    .mobile-menu a:focus {
-        background: rgba(255, 255, 255, 0.08);
+    .mobile-menu-header span {
+        font-weight: 800;
+        color: var(--text);
+        letter-spacing: -.02em;
     }
 
     .close-menu-btn {
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 2.2rem;
-        font-weight: 700;
-        align-self: flex-end;
-        margin-bottom: 18px;
-        cursor: pointer;
+        background: rgba(47, 37, 32, .06);
+        border: 0;
+        color: var(--text);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        font-size: 1.6rem;
         line-height: 1;
-        padding: 0 8px;
-        transition: color .2s;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform .2s ease, background .2s ease;
     }
 
     .close-menu-btn:hover,
     .close-menu-btn:focus {
-        color: var(--accent, #e89a7d);
+        background: rgba(242, 141, 61, .16);
+        transform: scale(1.05);
+    }
+
+    .mobile-menu a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 1.02rem;
+        font-weight: 700;
+        padding: 14px 16px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, .76);
+        border: 1px solid rgba(47, 37, 32, .08);
+        transition: transform .22s ease, background .22s ease, box-shadow .22s ease;
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a:focus {
+        background: #fff7f2;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 22px rgba(44, 30, 22, .08);
     }
 
     .mobile-menu-backdrop {
-        display: block;
         position: fixed;
         inset: 0;
-        left: 82vw;
-        width: 18vw;
-        min-width: 60px;
-        height: 100vh;
-        background: rgba(21, 21, 21, 0.18);
+        background: rgba(20, 15, 12, 0.28);
+        backdrop-filter: blur(4px);
         z-index: 2000;
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.3s;
+        transition: opacity .28s ease;
     }
 
     .mobile-menu.open~.mobile-menu-backdrop {
         opacity: 1;
         pointer-events: auto;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    body.menu-open main,
+    body.menu-open header {
+        filter: blur(3px);
+        transition: filter .25s ease;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    body.menu-open .mobile-menu,
+    body.menu-open .mobile-menu-backdrop {
+        pointer-events: auto;
+        user-select: auto;
+        filter: none;
     }
 }

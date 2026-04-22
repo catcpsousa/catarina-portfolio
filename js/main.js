@@ -1,29 +1,31 @@
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
+
 const filters = document.getElementById('filters');
 const cards = [...document.querySelectorAll('.project-card')];
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenuBtn = document.getElementById('closeMenuBtn');
+const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
 
 function openMenu() {
   mobileMenu.classList.add('open');
-  mobileMenuBackdrop.style.opacity = '1';
-  mobileMenuBackdrop.style.pointerEvents = 'auto';
+  mobileMenuBackdrop.classList.add('open');
+  document.body.classList.add('menu-open');
 }
 
 function closeMenu() {
   mobileMenu.classList.remove('open');
-  mobileMenuBackdrop.style.opacity = '0';
-  mobileMenuBackdrop.style.pointerEvents = 'none';
+  mobileMenuBackdrop.classList.remove('open');
+  document.body.classList.remove('menu-open');
 }
 
-// Abrir menu
-menuBtn.addEventListener('click', openMenu);
-// Fechar menu
-closeMenuBtn.addEventListener('click', closeMenu);
-mobileMenuBackdrop.addEventListener('click', closeMenu);
-// Fechar ao clicar num link
-mobileMenu.querySelectorAll('a').forEach(link => {
+menuBtn?.addEventListener('click', openMenu);
+closeMenuBtn?.addEventListener('click', closeMenu);
+mobileMenuBackdrop?.addEventListener('click', closeMenu);
+
+mobileMenu?.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', closeMenu);
 });
+
 
 filters?.addEventListener('click', e => {
     const btn = e.target.closest('.filter-btn');
