@@ -53,9 +53,12 @@ window.addEventListener('scroll', () => {
     document.querySelector('.glow-b')?.style.setProperty('transform', `translateY(${-y}px)`);
 });
 
+
 const backToTopBtn = document.getElementById('backToTopBtn');
 
 function toggleBackToTop() {
+  
+  if (!backToTopBtn) return;
   if (window.scrollY > window.innerHeight * 0.8) {
     backToTopBtn.removeAttribute('hidden');
     backToTopBtn.classList.add('is-visible');
